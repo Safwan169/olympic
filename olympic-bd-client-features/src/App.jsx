@@ -5,7 +5,7 @@ import SupportTheNation from "./components/SupportTheNation/SupportTheNation";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import RecentNews from "./components/RecentNews";
 import Banner from "./components/Banner";
 import Exports from "./components/Exports";
