@@ -1,0 +1,42 @@
+/* Ensure proper container for the images */
+.animated-container {
+  height: 200px;
+  width: 500px;
+  margin: 100px auto;
+  position: relative;
+}
+
+/* Base image styling - now images are bigger (150px instead of 100px) */
+.animated-container img {
+  height: 150px; /* Increased size */
+  position: absolute;
+  left: 0;
+  offset-path: path("m 0 50 q 50-30 100-30 t 100 30 100 0 100-30 100 30");
+  box-shadow: 1px 1px 3px #0008;
+  transition: transform 0.4s ease-out,
+    offset-path 0.4s cubic-bezier(0.77, -1.17, 0.75, 0.84), box-shadow 0.3s,
+    z-index 0.3s;
+  z-index: 0;
+}
+
+/* Hover effect - Enlarges further */
+.animated-container img:hover {
+  transform: scale(2.5); /* Increased scale factor */
+  offset-path: path("m 5 65 q 45-0 90-0 t 90 0 90 0 90-0 90 0");
+  box-shadow: 3px 4px 10px #0006;
+  z-index: 999;
+}
+
+/* 4 images */
+.animated-container img:nth-last-child(4):first-child {
+  offset-distance: 10%;
+}
+.animated-container img:nth-last-child(3):nth-child(2) {
+  offset-distance: 35%;
+}
+.animated-container img:nth-last-child(2):nth-child(3) {
+  offset-distance: 65%;
+}
+.animated-container img:last-child:nth-child(4) {
+  offset-distance: 90%;
+}
