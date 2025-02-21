@@ -133,18 +133,18 @@ const Navbar = () => {
                         <a href="#" className="hover:text-yellow-200  text-white text-sm flex items-center">
                             <FontAwesomeIcon icon={faGlobe} className="mr-1" /> Change Country
                         </a>
-                        <div className="flex text-white space-x-2">
+                        <div className="flex text-white space-x-3">
                             <a href="#" className="hover:text-yellow-200">
-                                <FontAwesomeIcon icon={faFacebook} size="sm" />
+                                <FontAwesomeIcon icon={faFacebook} size="25" />
                             </a>
                             <a href="#" className="hover:text-yellow-200">
-                                <FontAwesomeIcon icon={faLinkedin} size="sm" />
+                                <FontAwesomeIcon icon={faLinkedin} size="25" />
                             </a>
                             <a href="#" className="hover:text-yellow-200">
-                                <FontAwesomeIcon icon={faYoutube} size="sm" />
+                                <FontAwesomeIcon icon={faYoutube} size="25" />
                             </a>
                             <a href="#" className="hover:text-yellow-200">
-                                <FontAwesomeIcon icon={faInstagram} size="sm" />
+                                <FontAwesomeIcon icon={faInstagram} size="25" />
                             </a>
                         </div>
                     </div>
