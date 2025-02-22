@@ -46,7 +46,11 @@ export default function Exports() {
           <Tooltip id="tooltip" />
 
           {mapData ? (
-            <ComposableMap projectionConfig={{ scale: 130 }} className="w-full">
+            <ComposableMap
+              projectionConfig={{ scale: 130 }}
+              className="w-full"
+              disableZoom={true} // Disabling zoom functionality
+            >
               <Geographies geography={mapData}>
                 {({ geographies }) =>
                   geographies.map((geo) => {
@@ -59,9 +63,7 @@ export default function Exports() {
                         geography={geo}
                         fill={isHighlighted ? "#FF5733" : "#D6D6DA"}
                         stroke="#FFF"
-                        className={`transition-all duration-300 ease-in-out ${
-                          isHighlighted ? "hover:fill-red-500 animate-pulse" : "hover:fill-gray-400"
-                        }`}
+                        className="transition-all duration-300 ease-in-out"
                         onMouseEnter={() => {
                           setTooltipContent(
                             `<div class="text-white p-2">
@@ -107,7 +109,7 @@ export default function Exports() {
           </h2>
           <p className="text-gray-600 text-lg mt-4 leading-relaxed">
             Olympic’s products are trusted worldwide, reaching markets in
-            **over 30+ countries.** We ensure quality, safety, and reliability
+            <strong> over 30+ countries.</strong> We ensure quality, safety, and reliability
             in every shipment.
           </p>
           <button className="w-full px-5 py-3 font-medium text-center hover:cursor-pointer text-white bg-gradient-to-r from-red-600 to-yellow-500 border-2 border-red-600 rounded-md shadow-md transition-all duration-300 relative overflow-hidden group hover:from-red-700 hover:to-yellow-600">
@@ -115,7 +117,6 @@ export default function Exports() {
             <span className="relative z-10 text-lg">Explore More</span>
           </button>
         </div>
-
       </div>
     </section>
   );

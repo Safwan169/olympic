@@ -14,6 +14,8 @@ import ProductSlider from "./components/productSlider/ProductSlider";
 import AnnualReports from "./components/annualReports/AnnualReports";
 import ProductCategories from "./components/productCategories/ProductCategories";
 import ProductCatalog from "./components/ProductCatalog";
+import WelcomeSection from "./components/welcomeSection";
+
 
 const App = () => {
   useEffect(() => {
@@ -27,6 +29,7 @@ const App = () => {
       <Navbar />
       <Banner />
       <ProductSlider />
+      <WelcomeSection/>
       <ProductCategories/>
       <ProductCatalog/>
       <AboutOverview />
